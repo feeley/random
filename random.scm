@@ -10,6 +10,18 @@
 
 ;;;=============================================================================
 
+(define-library (https://github.com/feeley/random)
+
+  (export make-random-u8vector
+          random-nonneg-integer)
+
+  (import (gambit)
+          (https://github.com/feeley/nonneg-integer))
+
+  (begin
+
+;;;=============================================================================
+
 (declare
   (standard-bindings)
   (extended-bindings)
@@ -46,5 +58,7 @@
         (if (>= x limit)
             (loop)
             (quotient x divisor))))))
+
+))
 
 ;;;=============================================================================
